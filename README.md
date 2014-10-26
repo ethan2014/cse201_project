@@ -1,4 +1,4 @@
-cse201_project
-==============
+CSE 201 Project
+===============
 
 our agile project for cse 201.
