@@ -1,0 +1,49 @@
+#wrapper
+{
+	width: 700px;
+	margin: auto;
+	background-color: #e3e3e3;
+}
+
+#header
+{
+	overflow: hidden;
+}
+
+#header_title
+{
+	float: left;
+	margin: 0;
+}
+
+#header_buttons
+{
+	float: right;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header_buttons li
+{
+	display: inline;
+}
+
+.button
+{
+	height: 30px;
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: #eeeeee;
+}
+
+#body
+{
+
+}
+
+#footer
+{
+
+}
