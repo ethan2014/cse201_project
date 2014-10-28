@@ -8,6 +8,11 @@
 #header
 {
 	overflow: hidden;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom: 1px solid gray;
 }
 
 #header_title
@@ -29,16 +34,99 @@
 	display: inline;
 }
 
+#search_box
+{
+
+}
+
+#search_list
+{
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	list-style: none;
+	text-align: center;
+	border-bottom: 1px solid gray;
+}
+
+#search_list li
+{
+	display: inline;
+}
+
+#search_form input
+{
+	display: inline;
+}
+
+#search_input
+{
+	height: 25px;
+	width: 300px;
+}
+
+#search_button
+{
+
+}
+
 .button
 {
 	height: 30px;
 	border: 1px solid black;
 	border-radius: 3px;
 	padding: 5px;
-	background-color: #eeeeee;
+	background-color: #EEEEEE;
+	display: block;
+}
+
+.button:hover
+{
+	cursor: pointer;
+	background-color: #A0A0A0;
 }
 
 #body
+{
+	padding: 10px;
+}
+
+#apps_list
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.app_item
+{
+	overflow: hidden;
+	height: 50px;
+}
+
+.item_left
+{
+	float: left;
+	width: 100px;
+}
+
+.item_right
+{
+	float: right;
+}
+
+.app_icon
+{
+
+}
+
+.app_title
+{
+
+}
+
+.app_desc
 {
 
 }
