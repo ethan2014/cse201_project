@@ -1,0 +1,36 @@
+CREATE TABLE App
+(
+appId INTEGER PRIMARY KEY AUTOINCREMENT,
+name text NOT NULL,
+developerId INTEGER NOT NULL,
+imageUrl text,
+description text,
+categoryId INTEGER,
+FOREIGN KEY(developerId) REFERENCES User(userId),
+FOREIGN KEY(categoryId) REFERENCES Category(categoryId)
+);
+
+CREATE TABLE User
+(
+userId INTEGER PRIMARY KEY AUTOINCREMENT,
+username text NOT NULL,
+password text NOT NULL,
+adminLevel INTEGER NOT NULL
+);
+
+CREATE TABLE Comment
+(
+appId INTEGER,
+userId INTEGER,
+title text NOT NULL,
+body text NOT NULL,
+timestamp date NOT NULL,
+FOREIGN KEY(appId) REFERENCES App(appId),
+FOREIGN KEY(userId) REFERENCES User(userId)
+);
+
+CREATE TABLE Category
+(
+categoryId INTEGER PRIMARY KEY AUTOINCREMENT,
+name text NOT NULL
+);
