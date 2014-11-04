@@ -92,6 +92,12 @@
 	padding: 10px;
 }
 
+#body_title
+{
+	text-align: center;
+	margin: 0;
+}
+
 #apps_list
 {
 	margin: 0;
@@ -101,18 +107,21 @@
 
 .app_item
 {
+	clear: both;
 	overflow: hidden;
-	height: 50px;
+	padding: 5px;
+	border-top: 1px solid gray;
 }
 
 .item_left
 {
 	float: left;
-	width: 100px;
+	width: 10%;
 }
 
 .item_right
 {
+	width: 90%;
 	float: right;
 }
 
@@ -123,15 +132,20 @@
 
 .app_title
 {
-
+	margin: 0;
+	padding-bottom: 3px;
 }
 
 .app_desc
 {
-
+	margin: 0;
 }
 
 #footer
 {
-
+	text-align: center;
+	color: darkgray;
+	font-size: 12px;
+	padding: 5px;
+	border-top: 1px solid gray;
 }
