@@ -1,0 +1,47 @@
+#wrapper
+{
+	width: 900px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+#header
+{
+	background-color: red;
+	overflow: hidden;
+	padding: 5px;
+}
+
+#headerTitle
+{
+	float: left;
+	margin: 0;
+	paddding: 0;
+}
+
+#headerButtons
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+#headerButtons li
+{
+	width: 75px;
+}
+
+#loginButton
+{
+	margin-bottom: 5px;
+}
+
+#body
+{
+	background-color: #E3E3E3;
+}
+
+#footer
+{
+
+}
