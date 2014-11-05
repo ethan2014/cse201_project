@@ -33,7 +33,7 @@ public abstract class BaseServlet extends HttpServlet {
 		super();
 	}
 	
-	protected final boolean userExists(String username, String password) {
+	protected final boolean userExists(String username, char password[]) {
 		// TODO
 		return true;
 	}
@@ -64,6 +64,10 @@ public abstract class BaseServlet extends HttpServlet {
 		
 		String username = userinfo.getUsername();
 		
+		// TODO: test if the user by the name username is logged in.  if they are,
+		// return false, if not, set there logged in flag to true in the database
+		// and return true
+		
 		return true;
 	}
 	
@@ -81,6 +85,10 @@ public abstract class BaseServlet extends HttpServlet {
 		}
 		
 		String username = userinfo.getUsername();
+		
+		// TODO: test if the user by the name username is logged out.  if they are,
+		// return false, if not, set there logged in flag to false in the database
+		// and return true
 		
 		return true;
 	}
