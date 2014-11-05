@@ -2,8 +2,11 @@ package servlets;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -39,20 +42,37 @@ public abstract class BaseServlet extends HttpServlet {
 		super();
 	}
 	
-	protected final Connection connectToDB() {
-		// TODO connect to the database and return the connection
-		return null;
+	protected final void redirectToHome(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+		rd.forward(request, response);
 	}
 	
-	protected final boolean userExists(String username, char password[]) {
+	protected final Connection connectToDB() {
+		Connection con;
+		
+		try {
+			con = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+		} catch (SQLException e) {
+			con = null;
+		}
+
+		return con;
+	}
+	
+	protected final boolean validateUser(String username, char password[]) {
 		// TODO test if this combination of username and password exists
 		// in the database
 		return true;
 	}
 	
+	protected final boolean userExists(String username) {
+		// TODO test if this username exists in the database
+		return true;
+	}
+	
 	protected final UserInfo getUserInfo(String username) {
 		// TODO get the user information (account type, logged in status, etc.) for
-		// this username
+		// this username from the database
 		UserInfo ret = new UserInfo();
 		
 		ret.setUsername(username);
@@ -70,7 +90,7 @@ public abstract class BaseServlet extends HttpServlet {
 	 * @param userinfo
 	 * @return true if logged in successfully. false otherwise.
 	 */
-	protected final boolean logInUser(UserInfo userinfo) {
+	protected final boolean loginUser(UserInfo userinfo) {
 		if (userinfo.isLoggedIn()) {
 			return false;
 		}
@@ -81,6 +101,8 @@ public abstract class BaseServlet extends HttpServlet {
 		// return false, if not, set there logged in flag to true in the database
 		// and return true
 		
+		userinfo.setLoggedIn(true);
+		
 		return true;
 	}
 	
@@ -90,9 +112,9 @@ public abstract class BaseServlet extends HttpServlet {
 	 * or if the database says this username is already logged out
 	 * 
 	 * @param userinfo
-	 * @return true if logged out successfully. flase otherwise.
+	 * @return true if logged out successfully. false otherwise.
 	 */
-	protected final boolean logOutUser(UserInfo userinfo) {
+	protected final boolean logoutUser(UserInfo userinfo) {
 		if (!userinfo.isLoggedIn()) {
 			return false;
 		}
@@ -102,6 +124,8 @@ public abstract class BaseServlet extends HttpServlet {
 		// TODO test if the user by the name username is logged out.  if they are,
 		// return false, if not, set there logged in flag to false in the database
 		// and return true
+		
+		userinfo.setLoggedIn(false);
 		
 		return true;
 	}

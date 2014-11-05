@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 	  "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -10,26 +12,27 @@
     <body>
 	<div id="wrapper">
 	    <div id="header">
-		<h2 id="headerTitle"><a href="./index.html">AppWorld</a></h2>
+		<h2 id="headerTitle"><a href="index.jsp">AppWorld</a></h2>
 		<ul id="headerButtons">
 		    <li>
-			<a href="login.html" id="loginButton" class="btn btn-default btn-block btn-xs">Login</a>
+			<a href="login.jsp" id="loginButton" class="btn btn-default btn-block btn-xs">Login</a>
 		    </li>
 		    <li>
-			<a href="signup.html" class="btn btn-default btn-block btn-xs">Sign Up</a>
+			<a href="signup.jsp" class="btn btn-default btn-block btn-xs">Sign Up</a>
 		    </li>
 		</ul>
 	    </div>
 	    <div id="body">
 		<form id="loginForm" role="form" action="LoginServlet" method="post">
 		    <div class="form-group">
-			<label for="email">Email address</label>
-			<input type="email" class="form-control" id="email" placeholder="Enter email">
+				<label for="username">Username</label>
+				<input type="username" class="form-control" id="username" name="username" placeholder="Enter Username">
 		    </div>
 		    <div class="form-group">
-			<label for="password">Password</label>
-			<input type="password" class="form-control" id="password" placeholder="Password">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" name="password" placeholder="Password">
 		    </div>
+		    ${loginMessage}
 		    <button type="submit" class="btn btn-default center-block">Login</button>
 		</form>
 	    </div>

@@ -15,9 +15,9 @@
 				<a href="./index.html">AppWorld</a>
 			</h2>
 			<ul id="headerButtons">
-				<li><a href="login.html" id="loginButton"
+				<li><a href="login.jsp" id="loginButton"
 					class="btn btn-default btn-block btn-xs">Login</a></li>
-				<li><a href="signup.html"
+				<li><a href="signup.jsp"
 					class="btn btn-default btn-block btn-xs">Sign Up</a></li>
 			</ul>
 		</div>
