@@ -1,6 +1,7 @@
 package servlets;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -12,6 +13,11 @@ import userinfo.UserInfo;
 
 public abstract class BaseServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	// TODO create database credentials
+	private static final String DB_URL = "temp";
+	private static final String DB_USERNAME = "temp";
+	private static final String DB_PASSWORD = "temp";
 	
 	public static final String USER_ACCOUNT = "user";
 	public static final String MODERATOR_ACCOUNT = "moderator";
@@ -33,13 +39,20 @@ public abstract class BaseServlet extends HttpServlet {
 		super();
 	}
 	
+	protected final Connection connectToDB() {
+		// TODO connect to the database and return the connection
+		return null;
+	}
+	
 	protected final boolean userExists(String username, char password[]) {
-		// TODO
+		// TODO test if this combination of username and password exists
+		// in the database
 		return true;
 	}
 	
 	protected final UserInfo getUserInfo(String username) {
-		// TODO
+		// TODO get the user information (account type, logged in status, etc.) for
+		// this username
 		UserInfo ret = new UserInfo();
 		
 		ret.setUsername(username);
@@ -64,7 +77,7 @@ public abstract class BaseServlet extends HttpServlet {
 		
 		String username = userinfo.getUsername();
 		
-		// TODO: test if the user by the name username is logged in.  if they are,
+		// TODO test if the user by the name username is logged in.  if they are,
 		// return false, if not, set there logged in flag to true in the database
 		// and return true
 		
@@ -86,7 +99,7 @@ public abstract class BaseServlet extends HttpServlet {
 		
 		String username = userinfo.getUsername();
 		
-		// TODO: test if the user by the name username is logged out.  if they are,
+		// TODO test if the user by the name username is logged out.  if they are,
 		// return false, if not, set there logged in flag to false in the database
 		// and return true
 		
