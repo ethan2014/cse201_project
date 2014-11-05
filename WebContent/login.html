@@ -3,8 +3,8 @@
 <html>
     <head>
 	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="./style.css">
-	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="include/css/style.css">
+	<link rel="stylesheet" type="text/css" href="include/bootstrap/css/bootstrap.css">
 	<script src="bootstrap/js/bootstrap.js"></script>
     </head>
     <body>
@@ -21,7 +21,7 @@
 		</ul>
 	    </div>
 	    <div id="body">
-		<form id="loginForm" role="form">
+		<form id="loginForm" role="form" action="LoginServlet" method="post">
 		    <div class="form-group">
 			<label for="email">Email address</label>
 			<input type="email" class="form-control" id="email" placeholder="Enter email">
