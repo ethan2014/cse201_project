@@ -12,7 +12,7 @@
 	<div id="wrapper">
 		<div id="header">
 			<h2 id="headerTitle">
-				<a href="./index.html">AppWorld</a>
+				<a href="./index.jsp">AppWorld</a>
 			</h2>
 			<ul id="headerButtons">
 				<li><a href="login.jsp" id="loginButton"
