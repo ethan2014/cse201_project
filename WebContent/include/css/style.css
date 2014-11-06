@@ -25,6 +25,17 @@
 	padding-top: 9px;
 }
 
+#headerTitle a
+{
+	color: black;
+	text-decoration: none;
+}
+
+#headerTitle a:hover
+{
+	color: #E3E3E3;
+}
+
 #headerButtons
 {
 	float: right;
