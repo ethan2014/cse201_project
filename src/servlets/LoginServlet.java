@@ -53,7 +53,7 @@ public class LoginServlet extends BaseServlet {
 				session.setAttribute("userinfo", userinfo);
 				redirectToHome(request, response);
 			} else {
-				// this user must be logged in already
+				// this user must already be logged in
 				
 				loginError(request, response, "User: " + username + " is already logged in");
 			}
