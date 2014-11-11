@@ -1,6 +1,4 @@
-CSE 201 Project
-===============
+cse201
+======
 
-our agile project for cse 201. We are creating a mock app store that we have titled 'AppWorld'
-
-Our current mock company name is WIP, Inc.
+Our CSE 201 Group Project

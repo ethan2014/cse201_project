@@ -1,0 +1,35 @@
+<template name="submit">
+  <div class="app">
+    <form role="form">
+      <div class="form-group">
+        <label for="appName">Application Name</label>
+        <input type="text" class="form-control" id="appName" placeholder="The name of the application">
+      </div>
+      <div class="form-group">
+        <label for="desc">Application Description</label>
+        <input type="text" class="form-control" id="desc" placeholder="The description of the application">
+      </div>
+      <div class="form-group">
+        <label for="platform">Available Platforms</label>
+        <input type="text" class="form-control" id="platform" placeholder="Platforms the application is available on. If multiple, separate by commas.">
+      </div>
+      <div class="form-group">
+        <label for="version">Available Version</label>
+        <input type="text" class="form-control" id="version" placeholder="The current available version of the application.">
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" placeholder="$x.xx">
+      </div>
+      <div class="form-group">
+        <label for="imageUrl">Image URL</label>
+        <input type="text" class="form-control" id="imageUrl" placeholder="Paste the direct url to your app icon">
+      </div>
+      <div class="form-group">
+        <label for="url">URL</label>
+        <input type="text" class="form-control" id="url" placeholder="Paste the url to your person development website (optional)">
+      </div>
+    <button class="btn btn-default submitApp">Submit</button>
+    </form>
+  </div>
+</template>
