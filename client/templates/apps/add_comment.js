@@ -9,5 +9,8 @@ Template.addComment.events({
     document.getElementById('content').value = '';
 
     return false;
+  },
+  'click .flip': function(event) {
+    $(".flipper").slideToggle("slow");
   }
 });
