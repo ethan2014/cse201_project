@@ -1,6 +1,8 @@
 ~*~APP WORLD HELP DOCUMENTATION~*~
 
-This is a help document for AppWorld.com, a website that helps you find and purchase apps quickly and easily. 
+OVERVIEW:
+AppWorld.com is a web application that allows users a variety of options. The application allows users to submit apps to an 
+online database. After doing so, users can search, comment, and rate user submitted apps.
 
 HOMEPAGE:
 The apps on the front page are listed in the order they were added to the website. 
@@ -29,7 +31,14 @@ To change the account password or sign out:
 
 SUBMIT APP:
 After signing in, you can submit an application by doing the following:
-      1. Click the "Submit App" in the top bar
-      2. On the Submit page, enter the required information in 
-         each field then click the "Submit" button at the bottom
+    1. Click the "Submit App" in the top bar
+    2. On the Submit page, enter the required information in 
+       each field then click the "Submit" button at the bottom
+         
+COMMENTING:
+After signing in, you can click on an app from the directory and comment on its page:
+  To comment simply:
+    1. Click the add comment button
+    2. Fill in the title and content in the expanded form
+    3. Click the "Submit" button
 
