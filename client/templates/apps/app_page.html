@@ -2,9 +2,11 @@
   <div class="row">
     {{> appHeader}}
   </div>
-  <div class="row">
-    {{> addComment}}
-  </div>
+  {{#if currentUser}}
+    <div class="row">
+      {{> addComment}}
+    </div>
+  {{/if}}
   <div class="row">
     {{> commentSection}}
   </div>
