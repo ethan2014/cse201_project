@@ -31,7 +31,14 @@ To change the account password or sign out:
 
 SUBMIT APP:
 After signing in, you can submit an application by doing the following:
-      1. Click the "Submit App" in the top bar
-      2. On the Submit page, enter the required information in 
-         each field then click the "Submit" button at the bottom
+    1. Click the "Submit App" in the top bar
+    2. On the Submit page, enter the required information in 
+       each field then click the "Submit" button at the bottom
+         
+COMMENTING:
+After signing in, you can click on an app from the directory and comment on its page:
+  To comment simply:
+    1. Click the add comment button
+    2. Fill in the title and content in the expanded form
+    3. Click the "Submit" button
 
