@@ -1,6 +1,0 @@
-~*~APP WORLD HELP DOCUMENTATION~*~
-
-This is a help document for AppWorld.com, a website that helps you find and purchase apps quickly and easily. 
-
-HOMEPAGE:
-The apps on the front page are listed in the order they were added to the website. 
