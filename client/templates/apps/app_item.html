@@ -1,7 +1,9 @@
 <template name="appItem">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="{{imageIcon}}" alt="...">
+      <a href="{{pathFor 'appPage'}}">
+        <img src="{{imageIcon}}" alt="..." onmouseover="this.src = '{{blurImage}}'" onmouseout="this.src = '{{imageIcon}}'">
+      </a>
       <div class="caption">
         <h3><a href="{{pathFor'appPage'}}">{{title}}</a><small class='text-right'>{{price}}</small></h3>
         <p>{{developer}}</p>

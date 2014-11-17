@@ -5,8 +5,9 @@ Template.submit.events({
     var price = document.getElementById('price').value;
     var platform = document.getElementById('platform').value;
     var version = document.getElementById('version').value;
-    var imageUrl = document.getElementById('imageUrl').value;
     var url = document.getElementById('url').value;
+
+    var imageUrl = Session.get('imageUrl');
 
     Apps.insert({
       title: appName,
@@ -21,7 +22,17 @@ Template.submit.events({
       approved: false
     });
 
+    Session.set('imageUrl', null);
+
     Router.go('/');
     return false;
   }
 });
+
+Template.submit.rendered = function() {
+  var widget = uploadcare.Widget('[role=uploadcare-uploader]');
+
+  widget.onUploadComplete(function(fileInfo) {
+    Session.set('imageUrl', fileInfo.originalUrl);
+  });
+}
