@@ -1,0 +1,14 @@
+<template name="appHeader">
+  <div class="col-sm-12 col-md-12">
+    <div class="thumbnail">
+      <a href="{{pathFor 'appPage'}}">
+        <img src="{{imageIcon}}" alt="..." onmouseover="this.src = '{{blurImage}}'" onmouseout="this.src = '{{imageIcon}}'">
+      </a>
+      <div class="caption">
+        <h3><a href="{{pathFor'appPage'}}">{{title}}</a><small class='text-right'>{{price}}</small></h3>
+        <p>{{developer}}</p>
+        <p>{{description}}</p>
+      </div>
+    </div>
+  </div>
+</template>
