@@ -1,0 +1,10 @@
+<template name="commentItem">
+  {{#AnimateWithVelocity}}
+    <div data-animate data-property="opacity" data-duration="500" data-from-value="0" data-to-value="1" class="panel panel-default">
+      <div class="panel-heading">{{title}} <small>By: {{author}}</small></div>
+      <div class="panel-body">
+        {{content}}
+      </div>
+    </div>
+  {{/AnimateWithVelocity}}
+</template>

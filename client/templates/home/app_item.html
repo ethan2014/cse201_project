@@ -1,0 +1,17 @@
+<template name="appItem">
+  {{#AnimateWithVelocity}}
+    <div data-animate data-property="opacity" data-duration="800" data-from-value="0" data-to-value="1" class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <a href="{{pathFor 'appPage'}}">
+          <img src="{{imageIcon}}" alt="..." onmouseover="this.src = '{{blurImage}}'" onmouseout="this.src = '{{imageIcon}}'">
+        </a>
+        <div class="caption">
+          <h3><a href="{{pathFor'appPage'}}">{{title}}</a><small class='text-right'>{{price}}</small></h3>
+          <p>{{developer}}</p>
+          <p>{{description}}</p>
+          <p><a href="{{pathFor 'appPage'}}" class="discuss btn btn-default">Learn More</a></p>
+        </div>
+      </div>
+    </div>
+  {{/AnimateWithVelocity}}
+</template>
