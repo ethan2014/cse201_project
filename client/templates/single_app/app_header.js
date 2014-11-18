@@ -1,7 +1,7 @@
 Template.appHeader.helpers({
   imageIcon: function() {
     if(this.imageUrl === null || this.imageUrl === "") {
-      return '../placeholder.jpg';
+      return '/placeholder.jpg';
     }
     else {
       return this.imageUrl;
@@ -9,7 +9,7 @@ Template.appHeader.helpers({
   },
   blurImage: function() {
     if(this.imageUrl === null || this.imageUrl === "") {
-      return '../placeholder.jpg';
+      return '/placeholder.jpg';
     }
     else {
       console.log(this.imageUrl);
