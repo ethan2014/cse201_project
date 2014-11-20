@@ -12,7 +12,6 @@ Template.appHeader.helpers({
       return '/placeholder.jpg';
     }
     else {
-      console.log(this.imageUrl);
       return this.imageUrl + '-/blur/100/-/grayscale/';
     }
   }
