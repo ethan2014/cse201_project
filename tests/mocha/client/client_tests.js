@@ -1,7 +1,7 @@
 if (!(typeof MochaWeb === 'undefined')){
   MochaWeb.testOnly(function(){
-    describe("a group of tests", function(){
-      it("should respect equality", function(){
+    describe("Tests", function(){
+      it("should respect equality (aka chai should be working)", function(){
         chai.assert.equal(5,5);
       });
     });
