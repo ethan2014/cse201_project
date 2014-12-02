@@ -8,7 +8,6 @@ if (Apps.find().count() === 0) {
     url: 'http://google.com',
     platform: 'Android',
     version: '1.0.0',
-    reviewScore: '5',
     approved: true
   });
   Apps.insert({
@@ -20,7 +19,6 @@ if (Apps.find().count() === 0) {
     url: 'http://google.com',
     platform: 'Android',
     version: '1.0.0',
-    reviewScore: '4',
     approved: true
   });
   Apps.insert({
@@ -32,7 +30,6 @@ if (Apps.find().count() === 0) {
     url: 'http://google.com',
     platform: 'Android',
     version: '1.0.0',
-    reviewScore: '3',
     approved: true
   });
 }
